@@ -6,9 +6,9 @@ on:
         type: choice
         description: "配置文件"
         required: true
-        default: oneplus_ace5_pro_b
+        default: JiuGeFaCai_oneplus_ace5_pro_v
         options:
-          - oneplus_ace5_pro_b
+          - JiuGeFaCai_oneplus_ace5_pro_v
       MANAGER_SOURCE:
         type: choice
         description: "管理器调用方向"
@@ -114,7 +114,7 @@ on:
 
 jobs:
   build:
-    name: ${{ github.event.inputs.FAST_BUILD == 'true' && ' [FAST]' || '' }}${{ github.event.inputs.KPM == 'true' && ' [KPM]' || '' }}${{ github.event.inputs.LSM == 'true' && ' [LSM]' || '' }}${{ github.event.inputs.SCHED == 'true' && ' [SCHED]' || '' }}${{ github.event.inputs.ZRAM == 'true' && ' [ZRAM]' || '' }}For ${{ github.event.inputs.FILE }} ${{ github.event.inputs.SUFFIX }}
+    name: ${{ github.event.inputs.FAST_BUILD == 'true' && ' [FAST]' || '' }}${{ github.event.inputs.KPM == 'true' && ' [KPM]' || '' }}${{ github.event.inputs.LSM == 'true' && ' [LSM]' || '' }}${{ github.event.inputs.SCHED == 'true' && ' [SCHED]' || '' }}${{ github.event.inputs.ZRAM == 'true' && ' [ZRAM]' || '' }}For JiuGeFaCai_oneplus_ace5_pro_v ${{ github.event.inputs.SUFFIX }}
     runs-on: ubuntu-latest
     env:
       CCACHE_COMPILERCHECK: "%compiler% -dumpmachine; %compiler% -dumpversion"
